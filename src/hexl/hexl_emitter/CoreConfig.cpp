@@ -178,7 +178,7 @@ CoreConfig::GridsConfig::GridsConfig(CoreConfig* cc)
   fbarrier->Add(NEWA GridGeometry(3, 2, 32, 4, 2, 32, 4));
   fbarrier->Add(NEWA GridGeometry(3, 5, 7, 12, 3, 5, 7));
   fbarrier->Add(NEWA GridGeometry(3, 3, 9, 13, 2, 7, 11));
-  if (cc->WavesPerGroup() > 1) {
+  if (cc->Wavesize() > 1 && cc->WavesPerGroup() > 1) {
     fbarrierEven->Add(NEWA GridGeometry(1, cc->Wavesize()*4, 1, 1, cc->Wavesize()*2, 1, 1));
     fbarrierEven->Add(NEWA GridGeometry(2, 4, cc->Wavesize(), 1, 2, cc->Wavesize(), 1));
     if (cc->WavesPerGroup() >= 4) {
